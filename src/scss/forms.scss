@@ -1,0 +1,16 @@
+//! Для элементов форм и кнопок;
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 9px 20px 17px 20px;
+	width: 208px;
+	height: 47px;
+	background-color: #ff6464;
+	border-radius: 2px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: cacl(29 / 20 * 100%);
+	color: #ffffff;
+}

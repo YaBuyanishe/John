@@ -1,0 +1,28 @@
+.footer {
+	text-align: center;
+	padding: 50px 0px;
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__link {
+		color: inherit;
+		font-size: 30px;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0px 17px;
+		@media (min-width: $md2) {
+			&:hover {
+				color: #ff6464;
+			}
+		}
+	}
+	&__text {
+		margin-top: 26px;
+		text-align: center;
+		font-size: 14px;
+		line-height: 21px;
+		color: #21243d;
+	}
+}

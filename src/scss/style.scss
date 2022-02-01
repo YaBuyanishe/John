@@ -1,0 +1,160 @@
+//===Обнуление===//
+// Обнуление отступов
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+// Меняет подсчёт ширины блока так, что контент посдстраивается под размеры блока, а не наоборот;
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+// Убирает обводку;
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+// Указывает элементы как блочные по-умолчанию;
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+// Уравнивает поведение текста в разных браузерах;
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-family: "Heebo";
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+// Наследование элементами шрифта;
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+// Придание определённых параметров некоторым элементам;
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+// Обнуление заголовков;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+//===Обнуление===//
+
+// Подключение шрифтов
+//! &display=swap&subset=cyrillic-ext // &display=swap - Контроль порядка подключаемых шрифтов // &subset=cyrillic-ext - Для кириллических шрифтов;
+// @import url();
+// Подключение шрифтов
+
+// Шрифт по-умолчанию;
+$font-family: "Heebo";
+// Шрифт по-умолчанию;
+
+// Иконочный шрифт
+@import "icons";
+// Иконочный шрифт
+
+// Переменные
+$minWidth: 320px;
+$maxWidth: 1152px;
+$maxWidthContainer: 856px;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+// Переменные
+
+// Общие параметры
+body {
+	color: #21243d;
+	font-size: 14px;
+}
+// Оболочка
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	// &._loaded {
+	// }
+}
+// Оболочка
+
+// Прибивание header и footer к верху и низу страницы;
+.page {
+	flex: 1 1 auto;
+	padding: 90px 0px 0px 0px;
+	@media (max-width: $md3) {
+		padding: 30px 0px 0px 0px;
+	}
+}
+// Прибивание header и footer к верху и низу страницы;
+
+// Основная сетка
+.container {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	@media (max-width: $md1) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+
+@import "ui.scss";
+@import "forms.scss";
+@import "header.scss";
+@import "about.scss";
+@import "works.scss";
+@import "article.scss";
+@import "blog.scss";
+@import "footer.scss";
